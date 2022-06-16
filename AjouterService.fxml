@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="300.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.AjouterServiceController">
+   <children>
+      <GridPane layoutX="74.0" layoutY="72.0" prefHeight="90.0" prefWidth="303.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="ID service:" />
+            <Label text="Nom:" GridPane.rowIndex="1" />
+            <Label text="ID Gestionnaire:" GridPane.rowIndex="2" />
+            <TextField fx:id="idServiceTextField" GridPane.columnIndex="1" />
+            <TextField fx:id="nomTextFiield" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="idGestionnaireTextField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+         </children>
+      </GridPane>
+      <Button fx:id="validationBtn" layoutX="124.0" layoutY="198.0" mnemonicParsing="false" onAction="#validationHandler" prefHeight="25.0" prefWidth="82.0" style="-fx-background-color: #97D627;" text="Valider" textFill="#f8f8f8" />
+      <Button fx:id="retourBtn" layoutX="281.0" layoutY="198.0" mnemonicParsing="false" onAction="#returnHandler" prefHeight="25.0" prefWidth="82.0" style="-fx-background-color: #ff7f50;" text="Retour" textFill="#f8f8f8" />
+      <HBox prefHeight="40.0" prefWidth="500.0" style="-fx-background-color: #00243E;">
+         <children>
+            <Label text="Ajouter un sevice" textFill="#efdfdf">
+               <font>
+                  <Font name="Arial" size="24.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="10.0" top="10.0" />
+               </HBox.margin>
+            </Label>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
